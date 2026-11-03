@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Formulário de inscrição no Clube Agrícola de Vila Pelicano para novos fazendeiros de Stardew Valley.">
+  <title>Cadastro — Guia Stardew Valley</title>
+</head>
+<body>
+
+  <a href="#conteudo-principal">Pular para o conteúdo</a>
+
+  <header>
+    <h1>Guia da Fazenda Stardew Valley</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="sobre.html">Sobre</a></li>
+      <li><a href="dados.html">Dados</a></li>
+      <li><a href="cadastro.html" aria-current="page">Cadastro</a></li>
+      <li><a href="contato.html">Contato</a></li>
+    </ul>
+  </nav>
+
+  <main id="conteudo-principal">
+    <h1>Cadastro no Clube Agrícola da Vila</h1>
+    <p>Preencha os dados abaixo para registrar sua fazenda e receber suprimentos e orientação dos moradores locais.</p>
+
+    <form action="#" method="post">
+      <fieldset>
+        <legend>Dados Pessoais do Agricultor</legend>
+
+        <p>
+          <label for="nome">Nome Completo:</label>
+          <input type="text" id="nome" name="nome" autocomplete="name" required>
+        </p>
+
+        <p>
+          <label for="email">E-mail de Contato:</label>
+          <input type="email" id="email" name="email" autocomplete="email" required>
+        </p>
+
+        <p>
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" autocomplete="tel">
+        </p>
+
+        <p>
+          <label for="data_chegada">Data da Chegada ao Vale:</label>
+          <input type="date" id="data_chegada" name="data_chegada" required>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Especificações da Propriedade</legend>
+
+        <p>Tipo de Fazenda Pretendida:</p>
+        <p>
+          <input type="radio" id="tipo_padrao" name="tipo_fazenda" value="padrao" required>
+          <label for="tipo_padrao">Fazenda Padrão (Foco em lavoura)</label>
+        </p>
+        <p>
+          <input type="radio" id="tipo_riachos" name="tipo_fazenda" value="riachos">
+          <label for="tipo_riachos">Fazenda Entre Riachos (Foco em pesca)</label>
+        </p>
+        <p>
+          <input type="radio" id="tipo_floresta" name="tipo_fazenda" value="floresta">
+          <label for="tipo_floresta">Fazenda na Floresta (Foco em forrageamento)</label>
+        </p>
+
+        <p>
+          <label for="nivel_experiencia">Nível de Experiência Agrícola (1 a 10):</label>
+          <input type="number" id="nivel_experiencia" name="nivel_experiencia" min="1" max="10">
+        </p>
+
+        <p>
+          <label for="orcamento_inicial">Investimento Inicial Estimado em Ouro (moedas):</label>
+          <input type="number" id="orcamento_inicial" name="orcamento_inicial" min="500.00" max="50000.00" step="0.50">
+        </p>
+
+        <p>
+          <label for="ferramenta_favorita">Ferramenta Prioritária:</label>
+          <select id="ferramenta_favorita" name="ferramenta_favorita" required>
+            <option value="">Selecione uma ferramenta...</option>
+            <option value="enxada">Enxada de Aço</option>
+            <option value="regador">Regador de Irídio</option>
+            <option value="picareta">Picareta de Ouro</option>
+          </select>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interesses e Termos de Adesão</legend>
+
+        <p>Áreas de Interesse Adicionais:</p>
+        <p>
+          <input type="checkbox" id="interesse_mineracao" name="interesses[]" value="mineracao">
+          <label for="interesse_mineracao">Exploração de Minas e Combate</label>
+        </p>
+        <p>
+          <input type="checkbox" id="interesse_pesca" name="interesses[]" value="pesca">
+          <label for="interesse_pesca">Pesca e Armadilhas de Covo</label>
+        </p>
+
+        <p>
+          <label for="biografia">Apresentação da Fazenda (máximo 300 caracteres):</label><br>
+          <textarea id="biografia" name="biografia" maxlength="300" rows="5" cols="40"></textarea>
+        </p>
+
+        <p>
+          <input type="checkbox" id="termos" name="termos" required>
+          <label for="termos">Declaro que li e aceito as regras da Associação de Agricultores do Vale Pelicano.</label>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Enviar Cadastro</button>
+        <button type="reset">Limpar Formulário</button>
+      </p>
+    </form>
+  </main>
+
+  <footer>
+    <p>Desenvolvido por Jonathan Felipe Soares | DS25/M3 — 2026</p>
+  </footer>
+
+</body>
+</html>
